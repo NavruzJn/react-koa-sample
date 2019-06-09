@@ -1,0 +1,65 @@
+{
+  "name": "pbf",
+  "version": "1.0.0",
+  "description": "Before start server, create .env file in root folder and add 2 keys (SECRET and SMS_KEY)",
+  "main": "index.js",
+  "scripts": {
+    "start": "babel-node src/index.js",
+    "lint": "node_modules/eslint/bin/eslint.js --fix \"src/**/*.js\" && prettier --write \"src/**/*.js\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/runtime": "^7.3.1",
+    "@koa/cors": "^3.0.0",
+    "dotenv": "^8.0.0",
+    "fs": "0.0.1-security",
+    "fs-extra": "^8.0.1",
+    "jsonwebtoken": "^8.5.1",
+    "koa": "^2.7.0",
+    "koa-body": "^4.1.0",
+    "koa-logger": "^3.2.0",
+    "koa-respond": "^2.1.0",
+    "koa-router": "^7.4.0",
+    "koa-static": "^5.0.0",
+    "koa2-cors": "^2.0.6",
+    "lodash": "^4.17.11",
+    "log4js": "^4.2.0",
+    "mongoose": "^5.5.7",
+    "nodemon": "^1.19.0",
+    "uuid": "^3.3.2",
+    "koa-compose": "latest",
+    "is-number": "latest"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.3",
+    "@babel/node": "^7.2.2",
+    "@babel/plugin-proposal-class-properties": "^7.3.3",
+    "@babel/plugin-transform-runtime": "^7.2.0",
+    "@babel/preset-env": "^7.3.1",
+    "babel-eslint": "^10.0.1",
+    "babel-plugin-source-map-support": "^2.0.1",
+    "cross-env": "^5.2.0",
+    "eslint": "^5.14.1",
+    "eslint-config-prettier": "^4.0.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "nodemon": "^1.18.10",
+    "prettier": "^1.16.4"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "src/__tests__/*",
+      "src/**/*.json",
+      "node_modules"
+    ],
+    "execMap": {
+      "js": "babel-node"
+    }
+  }
+}

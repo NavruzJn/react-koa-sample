@@ -1,0 +1,23 @@
+version: '3.6'
+
+services:
+  app:
+    build:
+      context: src
+      dockerfile: compose/app/Dockerfile
+    depends_on:
+      - mysql
+    ports:
+      - '8000:8000'
+
+#  mongodb:
+#    build: compose/mongodb
+
+  nginx:
+    build: compose/nginx
+    ports:
+      - '80:80'
+    volumes:
+      - './static:/opt/qweep/static'
+    depends_on:
+      - app

@@ -1,0 +1,8 @@
+{
+  "serverSettings": {
+    "port": 8080
+  },
+  "db": {
+    "connectPath": "mongodb://localhost/pbf"
+  }
+}
